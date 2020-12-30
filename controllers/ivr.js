@@ -92,11 +92,13 @@ module.exports.selectTeam = function (req, res) {
 			timeout: 5
 		})
 
+		/*
 		gather.say({
 			voice: 'woman',
 			language: 'fr-FR'
 		},'Appuyez sur une touche si vous souhaitez être rappelé par nos conseillers ' + team.friendlyName + ', ou restez en ligne')
-
+		*/
+		
 		/* create task attributes */
 		const attributes = {
 			text: "Le Client a choisi l'option '" + team.friendlyName + "'",
