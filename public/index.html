@@ -71,10 +71,14 @@
 				<div><a href="/callcenter/index.html" class="btn btn-primary">Ouvrir</a></div>
 
 				<h3>Portail Client</h3>
-				<span>Page pour les Clients qui veulent parler à un conseiller. Les Client peuvent solliciter un rappel, appeler un conseiller par téléphone, demander un appel video ou chatter avec un conseiller</span>
+				<span>Page pour les Clients qui veulent parler à un conseiller. Les Client peuvent appeler un conseiller par téléphone, demander un appel video ou chatter avec un conseiller</span>
 				<br><br>
+				<h4 style="margin:0px">Call us:</h4>
+				<h3 class="caller-id" style="margin:0px">{{configuration.twilio.callerId}}</h3>
 				<div>
+					<!--
 					<a href="/contact/index.html" class="btn btn-primary">Demande de Rappel</a>
+					-->
 					<a href="/contact/chat.html" class="btn btn-primary">Chat</a>
 					<a href="/contact/video.html" class="btn btn-primary">Appel Vidéo</a>
 				</div>

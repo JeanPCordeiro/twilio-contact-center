@@ -99,7 +99,7 @@ module.exports.selectTeam = function (req, res) {
 
 		/* create task attributes */
 		const attributes = {
-			text: "Le Client a choisi l'option " + team.friendlyName + "'",
+			text: "Le Client a choisi l'option '" + team.friendlyName + "'",
 			channel: 'phone',
 			phone: req.query.From,
 			name: req.query.From,
