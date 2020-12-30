@@ -27,7 +27,10 @@ module.exports.welcome = function (req, res) {
 		language: 'fr-FR'
 	},req.configuration.ivr.text)
 
-	twiml.say('You did not say anything or enter any digits.')
+	twiml.say({
+		voice: 'woman',
+		language: 'fr-FR'
+	},"Vous n'avez rien dit et n'avez pas appuyé sur une touche.")
 	twiml.pause({length: 2})
 	twiml.redirect({method: 'GET'}, 'welcome')
 
@@ -74,7 +77,10 @@ module.exports.selectTeam = function (req, res) {
 	/* the caller pressed a key that does not match any team */
 	if (team === null) {
 		// redirect the call to the previous twiml
-		twiml.say('Your selection was not valid, please try again')
+		twiml.say({
+			voice: 'woman',
+			language: 'fr-FR'
+		},"Votre choix n'est pas valide, merci d'essayer à nouveau")
 		twiml.pause({length: 2})
 		twiml.redirect({ method: 'GET' }, 'welcome')
 	} else {
@@ -86,7 +92,10 @@ module.exports.selectTeam = function (req, res) {
 			timeout: 5
 		})
 
-		gather.say('Press a key if you want a callback from ' + team.friendlyName + ', or stay on the line')
+		gather.say({
+			voice: 'woman',
+			language: 'fr-FR'
+		},'Appuyez sur un touche si vous souhaitez être rappelé par nos conseillers ' + team.friendlyName + ', or restez en ligne')
 
 		/* create task attributes */
 		const attributes = {
