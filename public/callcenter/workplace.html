@@ -28,7 +28,7 @@
         <div style="overflow:auto">
 
           <div class="logout">
-            <span ng-click="logout()">logout</span>
+            <span ng-click="logout()">Déconnexion</span>
           </div>
 
           <div class="on-queue-toggle" style="float:right">
@@ -38,7 +38,7 @@
 
         </div>
 
-          <h3 class="name" class="page-header">{{worker.friendlyName}}&#39;s Call Agent Interface</h3>
+          <h3 class="name" class="page-header">Panneau Conseiller {{worker.friendlyName}}</h3>
 
           <div>
             <span style="font-size:1em" ng-class="{'label-success': worker.activityName == 'Available', 'label-danger': worker.activityName == 'Unavailable', 'label-default': worker.activityName == 'Offline' }"
@@ -50,7 +50,7 @@
             <!-- reservation is waiting for acceptance -->
             <div ng-controller="WorkflowReservationController" ng-cloak class="panel panel-default agent-reservation" ng-show="reservation != null">
               <div class="panel-heading">
-                <h3 class="panel-title">Reservation</h3>
+                <h3 class="panel-title">Contact</h3>
               </div>
               <div class="panel-body">
 
@@ -61,7 +61,7 @@
                       <div class="timer" ng-class='{"invisible": !counter}'>created {{ counter | TaskWaitingTime }} ago</div>
                     </td>
                     <td class="accept-panel">
-                      <button ng-click="accept(reservation)">Accept</button>
+                      <button ng-click="accept(reservation)">Accepter</button>
                     </td>
                   </tr>
                 </table>
