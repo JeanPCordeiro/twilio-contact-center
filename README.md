@@ -126,7 +126,7 @@ After the installation has completed please open `https://<your-application-name
 
 This will install the application and all the dependencies on Heroku (login required) for you. As part of the installation, the Heroku app will walk you through configuration of environment variables. Please click on the following button to deploy the application.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/nash-md/twilio-contact-center)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/JeanPCordeiro/twilio-contact-center)
 
 After the installation has completed please open `https://<your-application-name>.herokuapp.com/setup` and configure the application. The demo overview will be accessible at `https://<your-application-name>.herokuapp.com`.
 
