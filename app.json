@@ -1,5 +1,5 @@
 {
-  "name": "Twilio Contact Center",
+  "name": "CATS Twilio Contact Center",
   "description": "A web-based contact center utilizing Twilio Client, Chat, Video, SMS and TaskRouter",
   "logo": "http://node-js-sample.herokuapp.com/node.svg",
   "keywords": ["node", "express", "twilio"],
