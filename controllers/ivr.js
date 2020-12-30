@@ -18,11 +18,14 @@ module.exports.welcome = function (req, res) {
 		method: 'GET',
 		numDigits: 1,
 		timeout: 4,
-		language: 'en-US',
+		language: 'fr-FR',
 		hints: keywords.join()
 	})
 
-	gather.say(req.configuration.ivr.text)
+	gather.say({
+		voice: 'woman',
+		language: 'fr-FR'
+	},req.configuration.ivr.text)
 
 	twiml.say('You did not say anything or enter any digits.')
 	twiml.pause({length: 2})
