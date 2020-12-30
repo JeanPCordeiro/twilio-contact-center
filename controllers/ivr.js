@@ -95,15 +95,15 @@ module.exports.selectTeam = function (req, res) {
 		gather.say({
 			voice: 'woman',
 			language: 'fr-FR'
-		},'Appuyez sur un touche si vous souhaitez être rappelé par nos conseillers ' + team.friendlyName + ', or restez en ligne')
+		},'Appuyez sur une touche si vous souhaitez être rappelé par nos conseillers ' + team.friendlyName + ', ou restez en ligne')
 
 		/* create task attributes */
 		const attributes = {
-			text: 'Caller answered IVR with option "' + team.friendlyName + '"',
+			text: "Le Client a choisi l'option " + team.friendlyName + "'",
 			channel: 'phone',
 			phone: req.query.From,
 			name: req.query.From,
-			title: 'Inbound call',
+			title: 'Appel Entrant',
 			team: team.id
 		}
 

@@ -57,8 +57,8 @@
                 <table>
                   <tr>
                     <td>
-                      <div class="title">{{reservation.task.attributes.title}} from {{reservation.task.attributes.name}}</div>
-                      <div class="timer" ng-class='{"invisible": !counter}'>created {{ counter | TaskWaitingTime }} ago</div>
+                      <div class="title">{{reservation.task.attributes.title}} depuis {{reservation.task.attributes.name}}</div>
+                      <div class="timer" ng-class='{"invisible": !counter}'>Initié depuis {{ counter | TaskWaitingTime }}</div>
                     </td>
                     <td class="accept-panel">
                       <button ng-click="accept(reservation)">Accepter</button>
@@ -82,7 +82,7 @@
             <div class="panel panel-default agent-task" ng-show="task != null">
 
               <div class="panel-heading">
-                <button ng-show="task != null" class="btn btn-primary complete-task" ng-click="complete()">Complete Task</button>
+                <button ng-show="task != null" class="btn btn-primary complete-task" ng-click="complete()">Terminé la tâche</button>
               </div>
 
               <div class="panel-body">
