@@ -1,16 +1,14 @@
-# Twilio Contact Center Demo for CATS
+# Centre de Contact Multicanal CATS avec les Services Twilio
 
-Essence of a modern contact center is to serve customers on multiple channels (voice, web chat, video, email, social media, etc.), allow them to move seamlessly across channels and most importantly maintain context of the conversations.
+L'essence d'un centre de contact moderne est de servir les clients sur de multiples canaux (voix, chat web, vidéo, e-mail, médias sociaux, etc.), de leur permettre de se déplacer de manière transparente d'un canal à l'autre et surtout de maintenir le contexte des conversations.
 
-The Twilio Contact Center demo is reference architecture for building a modern contact center. The focus of the demo is to show how to build a Twilio platform based contact center and the various backend and frontend components needed.
+La démo du centre de contact Twilio est l'architecture de référence pour la construction d'un centre de contact moderne. L'objectif de la démo est de montrer comment construire un centre de contact basé sur la plateforme Twilio et les différents composants backend et frontend nécessaires.
 
 <img src="contact-center-overview.png" alt="Twilio Contact Center" width="800">
 
-**Note:** We have done the basic work from an UX perspective and lot of opportunities remains to improve on it. It has been designed for demo purposes and has not been separately security checked.
+**Note:** Cette application a été écrite à des fins de démonstration avec un travail à minima sur l'UX et les fonctionnalités ...
 
-This application is provided as-is. Twilio does not officially support it.
-
-# Features
+# Services Twilio utilisés
 
 - Twilio Phone Numbers
 - Twilio Programmable Voice (PSTN, Twilio WebRTC Client)
@@ -20,29 +18,29 @@ This application is provided as-is. Twilio does not officially support it.
 - Twilio TaskRouter
 - Twilio REST APIs
 
-# Customer Journey Flows:
+# Flux des Parcours Clients:
 
-## Callback Voice Calling (PSTN):
+## Demande de rappel téléphonique (PSTN):
 
-Customer fills out online call request -> Form submitted to server -> Task on TaskRouter created -> Find available and matching agent -> Agent accepts reservation and dials customer out (PSTN) -> Connect customer to agent (WebRTC)
+Client rempli un formulaire de rappel -> Création d'une Tâche dans l'Orchestrateur -> Recheche d'un conseiller adhoc disponible -> Le conseiller accepte la tâche et le Client est rappelé (PSTN) -> Connextion entre le conseiller et le Client (WebRTC)
 
 ![Customer Journey Call Back over PSTN](contact_center_flow_call_back.png)
 
-## Inbound Voice Calling (PSTN):
+## Appel Voix Entrant (PSTN):
 
-Customer calls Twilio phone number -> Twilio requests webhook -> Server generates TwiML for IVR -> Caller selects IVR option -> Task on TaskRouter created -> Find available and matching agent -> Agent accepts reservation -> Connect customer to agent (WebRTC)
+Client appelle numéro CCM -> Twilio sollicite le webhook -> Serveur génère TwiML pour le SVI -> Client sélectionne une option -> Création d'une tâche dans l'Orchestrateur -> Recher d'un conseiller adhoc et disponible -> Conseiller accepte l'appel -> Connexion du conseiller au Client (WebRTC)
 
 ![Customer Journey Inbound Call](contact_center_flow_inbound.png)
 
-## Web Chat:
+## Chat :
 
-Customer fills out online web chat request form -> Form submitted to server -> Task on TaskRouter created -> Find available and matching agent -> Agent accepts reservation -> Start chat between customer and agent
+Client rempli un formulaire de demande de chat -> Création d'une tâche dans l'Orchestrateur -> Recherche d'un conseiller adhoc et disponible -> Conseiller accepte l'appel -> chat entre le conseiller et le Client
 
 ![Customer Journey Chat](contact_center_flow_chat.png)
 
-## Video Call:
+## Appel Vidéo :
 
-Customer fills out video call request form -> Form submitted to server -> Task on TaskRouter and video room created -> Find available and matching agent -> Agent accepts reservation -> Agent joins video room
+Client rempli un formulaire de demande d'appel vidéo -> Création d'une tâche dans l'Orchestrateur et d'une salle vidéo -> Recherche d'un conseiller adhoc et disponible -> Conseiller accepte l'appel  -> Conseiller rejoind la salle vidéo
 
 ![Customer Journey Video](contact_center_flow_video.png)
 
